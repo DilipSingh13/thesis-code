@@ -18,6 +18,12 @@ def main():
     size = (1200, 1200)
     
     t2 = time.perf_counter()
+    
+    source='/my-app'
+    dest='/var/www/html'
+    
+    shutil.rmtree(dest)
+    shutil.copytree(source, dest, copy_function=shutil.copy)
 
     print(f'Finished in {t2-t1} seconds')
 
