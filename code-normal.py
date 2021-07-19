@@ -1,6 +1,7 @@
 import boto3
 import os
 import time
+import shutil
 
 def downloadDirectoryFroms3():
     s3_resource = boto3.resource('s3')
